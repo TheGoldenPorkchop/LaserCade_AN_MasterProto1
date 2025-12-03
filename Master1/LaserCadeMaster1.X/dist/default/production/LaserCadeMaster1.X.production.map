@@ -6,7 +6,7 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v3.10\pic\dat\20250813170317_en.msgs \
   -cs -h+dist/default/production\LaserCadeMaster1.X.production.sym \
   --cmf=dist/default/production\LaserCadeMaster1.X.production.cmf -z \
-  -Q16F1788 -oC:\Users\there\AppData\Local\Temp\xcAsfts.0\driver_tmp_3.o \
+  -Q16F1788 -oC:\Users\there\AppData\Local\Temp\xcAsk44.0\driver_tmp_3.o \
   -presetVect=00h -pisrVect=04h -pcode=08h --fixupoverflow=error \
   -ver=XC8 PIC(R) Assembler --fixupoverflow=lstwarn \
   -Mdist/default/production/LaserCadeMaster1.X.production.map -E1 \
@@ -49,13 +49,13 @@ build/default/production/_ext/1472/LA_Master.o
                 config                             8007     8007        2        0       4
                 isrVect                               4        4        1        8       0
                 resetVect                             0        0        1        0       0
-                code                                  8        8      296       10       0
+                code                                  8        8      31C       10       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 isrVect                               4        4        1         0
                 resetVect                             0        0        1         0
-                code                                  8        8      296         0
+                code                                  8        8      31C         0
 
         CLASS   STRCODE        
 
@@ -202,15 +202,13 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 resetVect                      000000  000001  000001         0       0  CODE        2
                 isrVect                        000004  000001  000005         8       0  CODE        2
-                code                           000008  000296  00029E        10       0  CODE        2
+                code                           000008  00031C  000324        10       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK10           0053C-0056F              34           1
-        BANK11           005A0-005EF              50           1
-        BANK12           00620-0066F              50           1
+        BANK12           00648-0066F              28           1
         BANK13           006A0-006EF              50           1
         BANK14           00720-0076F              50           1
         BANK15           007A0-007EF              50           1
@@ -227,18 +225,16 @@ UNUSED ADDRESS RANGES
         BIGRAM           02000-027EF             7F0           1
         CODE             00001-00003               3           2
                          00005-00007               3
-                         0029E-03FFF             800
+                         00324-03FFF             800
         CONST            00001-00003               3           2
                          00005-00007               3
-                         0029E-03FFF             100
+                         00324-03FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00001-00003               3           2
                          00005-00007               3
-                         0029E-03FFF             100
+                         00324-03FFF             100
         IDLOC            08000-08003               4           2
-        RAM              0053C-0056F              34           1
-                         005A0-005EF              50
-                         00620-0066F              50
+        RAM              00648-0066F              28           1
                          006A0-006EF              50
                          00720-0076F              50
                          007A0-007EF              50
@@ -254,8 +250,6 @@ UNUSED ADDRESS RANGES
                          00CA0-00CBF              20
         SFR0             00002-00007               6           1
                          0000A-0000F               6
-        SFR11            00580-0059F              20           1
-        SFR12            00600-0061F              20           1
         SFR13            00680-0069F              20           1
         SFR14            00700-0071F              20           1
         SFR15            00780-0079F              20           1
@@ -277,16 +271,16 @@ UNUSED ADDRESS RANGES
         SFR31            00F80-00FEF              70           1
         STRCODE          00001-00003               3           2
                          00005-00007               3
-                         0029E-03FFF            3D62
+                         00324-03FFF            3CDC
         STRING           00001-00003               3           2
                          00005-00007               3
-                         0029E-03FFF             100
+                         00324-03FFF             100
 
                                   Symbol Table
 
-__H__absolute__ __absolute__ 00000  __Hcode         code         0029E
+__H__absolute__ __absolute__ 00000  __Hcode         code         00324
 __Hconfig       config       08009  __HisrVect      isrVect      00005
-__HresetVect    resetVect    00001  __Hspace_0      (abs)        0029E
+__HresetVect    resetVect    00001  __Hspace_0      (abs)        00324
 __Hspace_4      (abs)        10010  __L__absolute__ __absolute__ 00000
 __Lcode         code         00008  __Lconfig       config       00000
 __LisrVect      isrVect      00004  __LresetVect    resetVect    00000
