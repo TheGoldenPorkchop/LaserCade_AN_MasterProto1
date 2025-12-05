@@ -76,6 +76,7 @@ CALIBRATE_OUTPUT    EQU 0x56		;FOR THE I2C Write Command
 CALIBRATE_POS_H	    EQU 0x57		;FOR THE I2C Read Command
 CALIBRATE_POS_L	    EQU 0x58		;FOR THE I2C Read Command
 LED_NUMBER	    EQU 0x59		;FOR THE I2C Read Command
+I2C_STEPS	    EQU 0x60		;WHICH BYTE NUMBER IS GETTING SENT
 // Register: INDF0
 #define INDF0 INDF0
 INDF0                                    equ 0000h
