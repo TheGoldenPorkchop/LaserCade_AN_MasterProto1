@@ -6,7 +6,7 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v3.10\pic\dat\20250813170317_en.msgs \
   -cs -h+dist/default/production\LaserCadeMaster1.X.production.sym \
   --cmf=dist/default/production\LaserCadeMaster1.X.production.cmf -z \
-  -Q16F1788 -oC:\Users\there\AppData\Local\Temp\xcAsapo.0\driver_tmp_3.o \
+  -Q16F1788 -oC:\Users\there\AppData\Local\Temp\xcAsgts.0\driver_tmp_3.o \
   -presetVect=00h -pisrVect=04h -pcode=08h --fixupoverflow=error \
   -ver=XC8 PIC(R) Assembler --fixupoverflow=lstwarn \
   -Mdist/default/production/LaserCadeMaster1.X.production.map -E1 \
@@ -49,13 +49,13 @@ build/default/production/_ext/1472/LA_Master.o
                 config                             8007     8007        2        0       4
                 isrVect                               4        4        1        8       0
                 resetVect                             0        0        1        0       0
-                code                                  8        8      1B8       10       0
+                code                                  8        8      1CA       10       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 isrVect                               4        4        1         0
                 resetVect                             0        0        1         0
-                code                                  8        8      1B8         0
+                code                                  8        8      1CA         0
 
         CLASS   STRCODE        
 
@@ -202,7 +202,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 resetVect                      000000  000001  000001         0       0  CODE        2
                 isrVect                        000004  000001  000005         8       0  CODE        2
-                code                           000008  0001B8  0001C0        10       0  CODE        2
+                code                           000008  0001CA  0001D2        10       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
@@ -224,22 +224,22 @@ UNUSED ADDRESS RANGES
         BANK23           00BA0-00BEF              50           1
         BANK24           00C20-00C6F              50           1
         BANK25           00CA0-00CBF              20           1
-        BANK7            003A0-003EF              50           1
+        BANK7            003A4-003EF              4C           1
         BANK8            00420-0046F              50           1
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-027EF             7F0           1
         CODE             00001-00003               3           2
                          00005-00007               3
-                         001C0-03FFF             800
+                         001D2-03FFF             800
         CONST            00001-00003               3           2
                          00005-00007               3
-                         001C0-03FFF             100
+                         001D2-03FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00001-00003               3           2
                          00005-00007               3
-                         001C0-03FFF             100
+                         001D2-03FFF             100
         IDLOC            08000-08003               4           2
-        RAM              003A0-003EF              50           1
+        RAM              003A4-003EF              4C           1
                          00420-0046F              50
                          004A0-004EF              50
                          00520-0056F              50
@@ -282,21 +282,20 @@ UNUSED ADDRESS RANGES
         SFR29            00E80-00EEF              70           1
         SFR30            00F00-00F6F              70           1
         SFR31            00F80-00FEF              70           1
-        SFR7             00380-0039F              20           1
         SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
         STRCODE          00001-00003               3           2
                          00005-00007               3
-                         001C0-03FFF            3E40
+                         001D2-03FFF            3E2E
         STRING           00001-00003               3           2
                          00005-00007               3
-                         001C0-03FFF             100
+                         001D2-03FFF             100
 
                                   Symbol Table
 
-__H__absolute__ __absolute__ 00000  __Hcode         code         001C0
+__H__absolute__ __absolute__ 00000  __Hcode         code         001D2
 __Hconfig       config       08009  __HisrVect      isrVect      00005
-__HresetVect    resetVect    00001  __Hspace_0      (abs)        001C0
+__HresetVect    resetVect    00001  __Hspace_0      (abs)        001D2
 __Hspace_4      (abs)        10010  __L__absolute__ __absolute__ 00000
 __Lcode         code         00008  __Lconfig       config       00000
 __LisrVect      isrVect      00004  __LresetVect    resetVect    00000
